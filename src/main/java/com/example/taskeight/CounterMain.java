@@ -1,6 +1,6 @@
 package com.example.taskeight;
 
-public class CounterThread {
+public class CounterMain {
 
     public static void main(String[] args) {
         Counter counter = new Counter();

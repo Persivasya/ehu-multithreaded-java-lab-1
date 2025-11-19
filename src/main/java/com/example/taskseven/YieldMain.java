@@ -1,7 +1,7 @@
 package com.example.taskseven;
 
 public class YieldMain {
-    
+
     private static final int THREAD_COUNT = 8;
     private static final long ITERATIONS = 50_000_000L;
 
@@ -28,14 +28,14 @@ public class YieldMain {
                 System.out.println("Impossible: " + x);
             }
         };
-        
+
         // Warm up
         test(taskWithYield);
         test(taskWithoutYield);
 
         System.out.println("=== Actual measurement ===");
         long noYieldTime = test(taskWithoutYield);
-        long yieldTime   = test(taskWithYield);
+        long yieldTime = test(taskWithYield);
 
         System.out.println("No yield: " + noYieldTime + " ms");
         System.out.println("With yield: " + yieldTime + " ms");
@@ -43,7 +43,6 @@ public class YieldMain {
 
     private static long test(Runnable task) throws InterruptedException {
         Thread[] threads = new Thread[THREAD_COUNT];
-
 
         long start = System.currentTimeMillis();
 

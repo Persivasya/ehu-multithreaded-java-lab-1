@@ -1,6 +1,7 @@
 package com.example.taskfive;
 
 public class InterruptedMain {
+
     public static void main(String[] args) {
         Thread th = new Thread(() -> {
             try {
